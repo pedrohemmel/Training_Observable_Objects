@@ -12,18 +12,21 @@ import XCTest
 final class Training_Observable_ObjectsTests: XCTestCase {
 
     override func setUpWithError() throws {
+        print("Começou testes")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        print("Acabou testes")
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testExample() throws {
+        print("OI")
         @StateObject var carteiraPessoaViewModel = CarteiraPessoaViewModel(carteiraPessoa: CarteiraPessoaModel(nome: "Pedro Henrique", saldo: 10))
 
         carteiraPessoaViewModel.retiraSaldoCarteiraSaldo(qtdSaldo: 11.0)
-        XCTAssert(carteiraPessoaViewModel.carteiraPessoa.saldo == 10)
+        XCTAssert(carteiraPessoaViewModel.carteiraPessoa.saldo == 1)
     }
 
 }
