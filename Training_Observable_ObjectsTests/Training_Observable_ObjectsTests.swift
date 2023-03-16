@@ -26,7 +26,7 @@ final class Training_Observable_ObjectsTests: XCTestCase {
         @StateObject var carteiraPessoaViewModel = CarteiraPessoaViewModel(carteiraPessoa: CarteiraPessoaModel(nome: "Pedro Henrique", saldo: 10))
 
         carteiraPessoaViewModel.retiraSaldoCarteiraSaldo(qtdSaldo: 11.0)
-        XCTAssert(carteiraPessoaViewModel.carteiraPessoa.saldo == 1)
+        XCTAssert(carteiraPessoaViewModel.carteiraPessoa.saldo == 11, "Saldo não está correto")
     }
 
 }
